@@ -1,0 +1,128 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 02/06/2023 14:44:55 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: C:\Program Files\Keil_v5\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJE
+                      CT(.\Objects\main.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000                   2     ORG 0H
+0000 020100            3     LJMP MAIN
+0100                   4     ORG 100H
+0100                   5     MAIN:
+0100 3130              6     CALL TAKE_INP
+                       7     
+0102 80FE              8     HERE: SJMP HERE
+0130                   9     ORG 130H
+                      10     
+                      11     
+0130                  12     TAKE_INP:
+                      13     
+                      14             
+0130 75900F           15             MOV P1, #0FH
+0133                  16     START:
+                      17             
+0133 C287             18             CLR P0.7
+0135                  19     NEXT:
+0135 E590             20             MOV A, P1
+                      21     
+0137                  22     SA:
+0137 B4010B           23             CJNE A, #1B, RE
+013A B287             24             CPL P0.7
+                      25             
+                      26             
+013C 78FC             27             MOV R0, #0FCH
+013E 79F6             28             MOV R1, #0F6H
+0140 12016F           29             LCALL DELAYS
+0143 80F0             30     SJMP NEXT
+                      31     
+0145                  32     RE:
+0145 B4030B           33             CJNE A, #11B, GA
+0148 B287             34             CPL P0.7
+                      35             
+                      36             
+014A 78FD             37             MOV R0, #0FDH
+014C 7955             38             MOV R1, #55H
+014E 12016F           39             LCALL DELAYS
+0151 80E2             40     SJMP NEXT
+                      41     
+0153                  42     GA:
+0153 B4070B           43             CJNE A, #111B, MA
+0156 B287             44             CPL P0.7
+                      45             
+                      46             
+0158 78FD             47             MOV R0, #0FDH
+015A 79A0             48             MOV R1, #0A0H
+015C 12016F           49             LCALL DELAYS
+015F 80D4             50     SJMP NEXT
+                      51     
+0161                  52     MA:
+0161 B40FCF           53             CJNE A, #1111B, START
+0164 B287             54             CPL P0.7
+                      55             
+                      56             
+0166 78FD             57             MOV R0, #0FDH
+A51 MACRO ASSEMBLER  MAIN                                                                 02/06/2023 14:44:55 PAGE     2
+
+0168 79C7             58             MOV R1, #0C7H
+016A 12016F           59             LCALL DELAYS
+016D 80C6             60     SJMP NEXT
+                      61     
+                      62             
+016F                  63     DELAYS:
+016F B80001           64             CJNE R0, #0, CHECKS
+0172 22               65             RET
+0173                  66     CHECKS:
+0173 B9FF04           67             CJNE R1, #0FFH, STARTS
+0176 08               68             INC R0
+0177 09               69             INC R1
+0178 80F5             70             SJMP DELAYS
+                      71             
+017A                  72     STARTS:
+017A 09               73             INC R1
+017B 80F6             74             SJMP CHECKS
+                      75     
+                      76     
+017D                  77     DELAYH:
+017D D28C             78             SETB TR0
+017F                  79     CHECKH:
+017F 308DFD           80             JNB TF0, CHECKH
+0182 C28C             81             CLR TR0
+0184 C28D             82             CLR TF0
+0186 22               83             RET
+                      84     END
+A51 MACRO ASSEMBLER  MAIN                                                                 02/06/2023 14:44:55 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CHECKH . . . . . .  C ADDR   017FH   A   
+CHECKS . . . . . .  C ADDR   0173H   A   
+DELAYH . . . . . .  C ADDR   017DH   A   
+DELAYS . . . . . .  C ADDR   016FH   A   
+GA . . . . . . . .  C ADDR   0153H   A   
+HERE . . . . . . .  C ADDR   0102H   A   
+MA . . . . . . . .  C ADDR   0161H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+NEXT . . . . . . .  C ADDR   0135H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+RE . . . . . . . .  C ADDR   0145H   A   
+SA . . . . . . . .  C ADDR   0137H   A   
+START. . . . . . .  C ADDR   0133H   A   
+STARTS . . . . . .  C ADDR   017AH   A   
+TAKE_INP . . . . .  C ADDR   0130H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

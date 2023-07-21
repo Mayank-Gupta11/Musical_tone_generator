@@ -1,0 +1,104 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/06/2023  14:44:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\PROGRAM FILES\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\saregama PRINT (.\Listings\saregama.m51) RAMSI
+>> ZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+
+
+LINK MAP OF MODULE:  .\Objects\saregama (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0187H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\saregama (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:017FH         SYMBOL        CHECKH
+  C:0173H         SYMBOL        CHECKS
+  C:017DH         SYMBOL        DELAYH
+  C:016FH         SYMBOL        DELAYS
+  C:0153H         SYMBOL        GA
+  C:0102H         SYMBOL        HERE
+  C:0161H         SYMBOL        MA
+  C:0100H         SYMBOL        MAIN
+  C:0135H         SYMBOL        NEXT
+  D:0080H         SYMBOL        P0
+  D:0090H         SYMBOL        P1
+  C:0145H         SYMBOL        RE
+  C:0137H         SYMBOL        SA
+  C:0133H         SYMBOL        START
+  C:017AH         SYMBOL        STARTS
+  C:0130H         SYMBOL        TAKE_INP
+  B:0088H.5       SYMBOL        TF0
+  B:0088H.4       SYMBOL        TR0
+  C:0000H         LINE#         3
+  C:0100H         LINE#         6
+  C:0102H         LINE#         8
+  C:0130H         LINE#         15
+  C:0133H         LINE#         18
+  C:0135H         LINE#         20
+  C:0137H         LINE#         23
+  C:013AH         LINE#         24
+  C:013CH         LINE#         27
+  C:013EH         LINE#         28
+  C:0140H         LINE#         29
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/06/2023  14:44:55  PAGE 2
+
+
+  C:0143H         LINE#         30
+  C:0145H         LINE#         33
+  C:0148H         LINE#         34
+  C:014AH         LINE#         37
+  C:014CH         LINE#         38
+  C:014EH         LINE#         39
+  C:0151H         LINE#         40
+  C:0153H         LINE#         43
+  C:0156H         LINE#         44
+  C:0158H         LINE#         47
+  C:015AH         LINE#         48
+  C:015CH         LINE#         49
+  C:015FH         LINE#         50
+  C:0161H         LINE#         53
+  C:0164H         LINE#         54
+  C:0166H         LINE#         57
+  C:0168H         LINE#         58
+  C:016AH         LINE#         59
+  C:016DH         LINE#         60
+  C:016FH         LINE#         64
+  C:0172H         LINE#         65
+  C:0173H         LINE#         67
+  C:0176H         LINE#         68
+  C:0177H         LINE#         69
+  C:0178H         LINE#         70
+  C:017AH         LINE#         73
+  C:017BH         LINE#         74
+  C:017DH         LINE#         78
+  C:017FH         LINE#         80
+  C:0182H         LINE#         81
+  C:0184H         LINE#         82
+  C:0186H         LINE#         83
+  -------         ENDMOD        MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005EH BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=391
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
